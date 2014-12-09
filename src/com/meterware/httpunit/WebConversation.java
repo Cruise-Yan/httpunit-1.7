@@ -162,7 +162,7 @@ public class WebConversation extends WebClient {
      * open a connection for the given uniform resource locator
      * @param url - the url to use
      */
-    private URLConnection openConnection( URL url ) throws MalformedURLException, IOException {
+    protected URLConnection openConnection( URL url ) throws MalformedURLException, IOException {
         URLConnection connection = url.openConnection();
         if (connection instanceof HttpURLConnection) ((HttpURLConnection) connection).setInstanceFollowRedirects( false );
         connection.setUseCaches( false );
